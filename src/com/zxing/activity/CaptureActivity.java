@@ -131,6 +131,7 @@ public class CaptureActivity extends Activity implements Callback {
 //		
 			infoResultIntent.putExtras(bundle);
 			this.setResult(RESULT_OK, infoResultIntent);
+			//System.out.print(resultString);
 		}
 		CaptureActivity.this.finish();
 	}
