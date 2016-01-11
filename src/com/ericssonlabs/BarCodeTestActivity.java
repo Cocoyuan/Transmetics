@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class BarCodeTestActivity extends Activity {
     /** Called when the activity is first created. */
-	private TextView resultTextView;
+	//private TextView resultTextView;
 	private EditText qrStrEditText;
 	private ImageView qrImgImageView;
 	
@@ -28,7 +28,7 @@ public class BarCodeTestActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        resultTextView = (TextView) this.findViewById(R.id.tv_scan_result);
+       // resultTextView = (TextView) this.findViewById(R.id.tv_scan_result);
     //    qrStrEditText = (EditText) this.findViewById(R.id.et_qr_string);
     //    qrImgImageView = (ImageView) this.findViewById(R.id.iv_qr_image);
         
@@ -74,7 +74,7 @@ public class BarCodeTestActivity extends Activity {
 		if (resultCode == RESULT_OK) {
 			Bundle bundle = data.getExtras();
 			String scanResult = bundle.getString("result");
-			resultTextView.setText(scanResult);
+			//resultTextView.setText(scanResult);
 			
 		}
 	}

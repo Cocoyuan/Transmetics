@@ -126,11 +126,11 @@ public class CaptureActivity extends Activity implements Callback {
 			Intent infoResultIntent = new Intent(CaptureActivity.this,InfoActivity.class);
 			startActivityForResult(infoResultIntent, 0);
 //			Intent resultIntent = new Intent();
-//			Bundle bundle = new Bundle();
-//			bundle.putString("result", resultString);
+			Bundle bundle = new Bundle();
+			bundle.putString("result", resultString);
 //		
-//			resultIntent.putExtras(bundle);
-//			this.setResult(RESULT_OK, resultIntent);
+			infoResultIntent.putExtras(bundle);
+			this.setResult(RESULT_OK, infoResultIntent);
 		}
 		CaptureActivity.this.finish();
 	}
