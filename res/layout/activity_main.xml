@@ -5,43 +5,7 @@
     android:background="@android:color/white"
     android:orientation="vertical" >
 
-    <!--
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal" >
-
-         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Scan result："
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/tv_scan_result"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    
-         <EditText 
-        android:id="@+id/et_qr_string"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:hint="Input the text"/>
-    
-    <Button
-        android:id="@+id/btn_add_qrcode"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Generate QRcode" />
-    -->
-
+ 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -49,9 +13,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="46dp"
+            android:layout_height="45dp"
             android:orientation="horizontal" >
 
+             <ImageButton
+                android:id="@+id/btn_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+	        	android:layout_centerVertical="true"
+	        	android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:background="#54B5AC"
+                android:src="@drawable/icon_home" />
+             
             <MultiAutoCompleteTextView
                 android:id="@+id/text_searchbar"
                 android:layout_width="wrap_content"
@@ -61,11 +36,15 @@
                 android:text="MultiAutoCompleteTextView" />
 
             <ImageButton
-                android:id="@+id/button_search"
+                android:id="@+id/btn_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+	        	android:layout_centerVertical="true"
+	        	android:scaleType="centerInside"
                 android:layout_weight="1"
-                android:src="@android:drawable/btn_star" />
+                android:background="#54B5AC"
+                android:src="@drawable/icon_search" />
         </LinearLayout>
 
         <ImageView
@@ -88,37 +67,43 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="3" >
+        	android:layout_height="30px"
+        	android:orientation="horizontal"
+        	android:layout_weight="1" >
 
             <ImageButton
-                android:id="@+id/imageButton1"
+                android:id="@+id/btn_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginLeft="50dp"
+                android:layout_centerHorizontal="true"
+	        	android:layout_centerVertical="true"
+	        	android:scaleType="centerInside"
                 android:layout_weight="1"
-                android:src="@android:drawable/btn_star" />
-
-            <Button
-                android:id="@+id/btn_scan_barcode"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="clip_horizontal"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:text="Open camera" />
+                android:background="#54B5AC"
+                android:src="@drawable/icon_home_p" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/btn_scan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="50dp"
+                android:layout_centerHorizontal="true"
+	        	android:layout_centerVertical="true"
+	        	android:scaleType="centerInside"
                 android:layout_weight="1"
-                android:src="@android:drawable/btn_star" />
+                android:background="#54B5AC"
+                android:src="@drawable/icon_scan" />
+
+
+            <ImageButton
+                android:id="@+id/btn_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+	        	android:layout_centerVertical="true"
+	        	android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:background="#54B5AC"
+                android:src="@drawable/icon_user" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

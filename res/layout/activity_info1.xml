@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+ 
+    
+        <ImageView
+            android:id="@+id/iv_qr_image3"
+            android:layout_width="match_parent"
+            android:layout_height="371dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.14"
+            android:src="@drawable/info01" />
+
+     
+    </LinearLayout>
+

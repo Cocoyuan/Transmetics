@@ -2,8 +2,6 @@ package com.ericssonlabs;
 
 import com.google.zxing.WriterException;
 import com.zxing.activity.CaptureActivity;
-import com.zxing.activity.InfoActivity;
-import com.zxing.encoding.EncodingHandler;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,18 +21,19 @@ public class BarCodeTestActivity extends Activity {
 	//private TextView resultTextView;
 	private EditText qrStrEditText;
 	private ImageView qrImgImageView;
+	private ImageButton bt_home, bt_user, bt_search, bt_set, bt_scan;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
         
-       // resultTextView = (TextView) this.findViewById(R.id.tv_scan_result);
-    //    qrStrEditText = (EditText) this.findViewById(R.id.et_qr_string);
-    //    qrImgImageView = (ImageView) this.findViewById(R.id.iv_qr_image);
-        
-        Button scanBarCodeButton = (Button) this.findViewById(R.id.btn_scan_barcode);
-        scanBarCodeButton.setOnClickListener(new OnClickListener() {
+        bt_home = (ImageButton) this.findViewById(R.id.btn_home);
+        bt_user = (ImageButton) findViewById(R.id.btn_user);
+        bt_search = (ImageButton) findViewById(R.id.btn_search);
+        bt_set = (ImageButton) findViewById(R.id.btn_set);
+        bt_scan = (ImageButton) this.findViewById(R.id.btn_scan);
+        bt_scan.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -67,15 +67,15 @@ public class BarCodeTestActivity extends Activity {
        */
     }
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		//澶勭悊鎵弿缁撴灉锛堝湪鐣岄潰涓婃樉绀猴級
-		if (resultCode == RESULT_OK) {
-			Bundle bundle = data.getExtras();
-			String scanResult = bundle.getString("result");
-			//resultTextView.setText(scanResult);
-			
-		}
-	}
+//	@Override
+//	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//		super.onActivityResult(requestCode, resultCode, data);
+//		//澶勭悊鎵弿缁撴灉锛堝湪鐣岄潰涓婃樉绀猴級
+//		if (resultCode == RESULT_OK) {
+//			Bundle bundle = data.getExtras();
+//			String scanResult = bundle.getString("result");
+//			//resultTextView.setText(scanResult);
+//			
+//		}
+//	}
 }

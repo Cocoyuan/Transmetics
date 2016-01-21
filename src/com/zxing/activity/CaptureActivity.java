@@ -51,7 +51,7 @@ public class CaptureActivity extends Activity implements Callback {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.camera);
+		setContentView(R.layout.activity_camera);
 		//ViewUtil.addTopView(getApplicationContext(), this, R.string.scan_card);
 		CameraManager.init(getApplication());
 		viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
@@ -121,19 +121,27 @@ public class CaptureActivity extends Activity implements Callback {
 		//FIXME
 		if (resultString.equals("")) {
 			Toast.makeText(CaptureActivity.this, "Scan failed!", Toast.LENGTH_SHORT).show();
-		}else {
-			System.out.println("Result:"+resultString);
-			Intent infoResultIntent = new Intent(CaptureActivity.this,InfoActivity.class);
-			startActivityForResult(infoResultIntent, 0);
-//			Intent resultIntent = new Intent();
-			Bundle bundle = new Bundle();
-			bundle.putString("result", resultString);
-//		
-			infoResultIntent.putExtras(bundle);
-			this.setResult(RESULT_OK, infoResultIntent);
-			//System.out.print(resultString);
 		}
+		else if (resultString.equals("150323300")){
+        	Intent intent = new Intent(CaptureActivity.this, InfoActivity2.class);  
+        	startActivity(intent);
+		}
+		else {
+			System.out.println("Result:"+resultString);
+			Intent infoResultIntent = new Intent(CaptureActivity.this,InfoActivity1.class);
+			startActivity(infoResultIntent);
+			
+		
+//			Intent resultIntent = new Intent();
+//			Bundle bundle = new Bundle();
+//			bundle.putString("result", resultString);
+//		
+//			resultIntent.putExtras(bundle);
+//			this.setResult(RESULT_OK, resultIntent);
+		}
+		System.out.println(resultString);
 		CaptureActivity.this.finish();
+
 	}
 	
 	private void initCamera(SurfaceHolder surfaceHolder) {

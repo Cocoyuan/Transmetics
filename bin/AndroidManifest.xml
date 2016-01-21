@@ -33,7 +33,15 @@
         </activity>
         <activity
             android:configChanges="orientation|keyboardHidden"
-            android:name="com.zxing.activity.InfoActivity"
+            android:name="com.zxing.activity.InfoActivity1"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.zxing.activity.InfoActivity2"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:windowSoftInputMode="stateAlwaysHidden" >
