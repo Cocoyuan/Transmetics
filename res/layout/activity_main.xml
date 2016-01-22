@@ -3,7 +3,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@android:color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:clipToPadding="true"  
+	android:fitsSystemWindows="true" >
 
  
     <LinearLayout
@@ -14,36 +16,39 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:background="#54B5AC"
             android:orientation="horizontal" >
 
              <ImageButton
                 android:id="@+id/btn_set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
 	        	android:scaleType="centerInside"
                 android:layout_weight="1"
-                android:background="#54B5AC"
+                android:background="#00000000"
                 android:src="@drawable/icon_home" />
              
             <MultiAutoCompleteTextView
                 android:id="@+id/text_searchbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="9"
+                android:layout_gravity="center_vertical"
                 android:ems="10"
-                android:text="MultiAutoCompleteTextView" />
+                android:text="Search" />
 
             <ImageButton
                 android:id="@+id/btn_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
 	        	android:scaleType="centerInside"
                 android:layout_weight="1"
-                android:background="#54B5AC"
+                android:background="#00000000"
                 android:src="@drawable/icon_search" />
         </LinearLayout>
 
@@ -67,9 +72,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-        	android:layout_height="30px"
-        	android:orientation="horizontal"
-        	android:layout_weight="1" >
+            android:layout_height="46.4dp"
+            android:background="#54B5AC"
+            android:orientation="horizontal" >
 
             <ImageButton
                 android:id="@+id/btn_home"
@@ -78,8 +83,7 @@
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
 	        	android:scaleType="centerInside"
-                android:layout_weight="1"
-                android:background="#54B5AC"
+                android:background="#00000000"
                 android:src="@drawable/icon_home_p" />
 
             <ImageButton
@@ -89,8 +93,8 @@
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
 	        	android:scaleType="centerInside"
-                android:layout_weight="1"
-                android:background="#54B5AC"
+                
+                android:background="#00000000"
                 android:src="@drawable/icon_scan" />
 
 
@@ -101,8 +105,7 @@
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
 	        	android:scaleType="centerInside"
-                android:layout_weight="1"
-                android:background="#54B5AC"
+                android:background="#00000000"
                 android:src="@drawable/icon_user" />
         </LinearLayout>
     </LinearLayout>
