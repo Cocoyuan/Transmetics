@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:orientation="vertical"
-    android:clipToPadding="true"  
-	android:fitsSystemWindows="true" >
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
 
- 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
-
-        <LinearLayout
+      <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="#54B5AC"
@@ -21,8 +15,8 @@
 
              <ImageButton
                 android:id="@+id/btn_set"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_gravity="center_vertical"
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
@@ -30,19 +24,21 @@
                 android:layout_weight="1"
                 android:background="#00000000"
                 android:src="@drawable/icon_home" />
-             
-            <MultiAutoCompleteTextView
-                android:id="@+id/text_searchbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:ems="10"
-                android:text="Search" />
+
+             <TextView
+                 android:id="@+id/text_top"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_vertical"
+                 android:textSize="20dp"
+                 android:textColor="#ffffff"
+                 android:layout_weight="4"
+                 android:text="Recommend" />
 
             <ImageButton
                 android:id="@+id/btn_search"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_gravity="center_vertical"
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
@@ -52,34 +48,99 @@
                 android:src="@drawable/icon_search" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/iv_qr_image1"
-            android:layout_width="1897dp"
-            android:layout_height="144dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_weight="0.65"
-            android:src="@drawable/interface4" />
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="530dp" >
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:orientation="vertical" >
 
         <ImageView
-            android:id="@+id/iv_qr_image2"
-            android:layout_width="189dp"
-            android:layout_height="144dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_weight="0.72"
-            android:src="@drawable/interface4" />
+            android:id="@+id/image_topb"
+            android:layout_width="fill_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/top_banner" />
 
-        <LinearLayout
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+		            android:id="@+id/image_brand1"
+		            android:layout_width="120dp"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/brand_avene" />
+                <ImageView
+		            android:id="@+id/image_brand2"
+		            android:layout_width="120dp"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/brand_caudalie" />
+                <ImageView
+		            android:id="@+id/image_brand3"
+		            android:layout_width="120dp"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/brand_nuxe" />
+                <ImageView
+		            android:id="@+id/image_brand4"
+		            android:layout_width="120dp"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/brand_occitane" />
+                <ImageView
+		            android:id="@+id/image_brand5"
+		            android:layout_width="120dp"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/brand_roche" />
+            </LinearLayout>
+        </HorizontalScrollView>
+        <ImageView
+            android:id="@+id/image_brands"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/brand_brands" />
+
+        <ImageView
+            android:id="@+id/image_bottomb"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/bottom_banner" />
+
+		</LinearLayout>
+		</ScrollView>
+<!--         
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="46.4dp"
+            android:background="#54B5AC"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom" > -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="46.4dp"
+            	android:background="#54B5AC"
+                android:gravity="bottom" >
+               
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="46.4dp"
             android:background="#54B5AC"
             android:orientation="horizontal" >
-
             <ImageButton
                 android:id="@+id/btn_home"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
 	        	android:scaleType="centerInside"
@@ -88,25 +149,28 @@
 
             <ImageButton
                 android:id="@+id/btn_scan"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
 	        	android:scaleType="centerInside"
-                
                 android:background="#00000000"
                 android:src="@drawable/icon_scan" />
 
-
             <ImageButton
                 android:id="@+id/btn_user"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
                 android:layout_centerHorizontal="true"
 	        	android:layout_centerVertical="true"
 	        	android:scaleType="centerInside"
                 android:background="#00000000"
                 android:src="@drawable/icon_user" />
-        </LinearLayout>
-    </LinearLayout>
+            </LinearLayout>
+      </RelativeLayout>
+    
 </LinearLayout>

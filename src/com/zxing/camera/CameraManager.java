@@ -38,11 +38,14 @@ public final class CameraManager {
 
   private static final String TAG = CameraManager.class.getSimpleName();
 
-  private static final int MIN_FRAME_WIDTH = 240;
-  private static final int MIN_FRAME_HEIGHT = 240;
-  private static final int MAX_FRAME_WIDTH = 480;
-  private static final int MAX_FRAME_HEIGHT = 360;
-
+//  private static final int MIN_FRAME_WIDTH = 240;
+//  private static final int MIN_FRAME_HEIGHT = 240;
+//  private static final int MAX_FRAME_WIDTH = 480;
+//  private static final int MAX_FRAME_HEIGHT = 360;
+  private static final int MIN_FRAME_WIDTH = 798;
+  private static final int MIN_FRAME_HEIGHT = 798;
+  private static final int MAX_FRAME_WIDTH = 798;
+  private static final int MAX_FRAME_HEIGHT = 798;
   private static CameraManager cameraManager;
 
   static final int SDK_INT; // Later we can use Build.VERSION.SDK_INT
@@ -131,7 +134,7 @@ public final class CameraManager {
 
       //FIXME
  //     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-      //是否使用前灯
+      //脢脟路帽脢鹿脫脙脟掳碌脝
 //      if (prefs.getBoolean(PreferencesActivity.KEY_FRONT_LIGHT, false)) {
 //        FlashlightManager.enableFlashlight();
 //      }
@@ -234,7 +237,8 @@ public final class CameraManager {
         height = MAX_FRAME_HEIGHT;
       }
       int leftOffset = (screenResolution.x - width) / 2;
-      int topOffset = (screenResolution.y - height) / 2;
+      int topOffset = (screenResolution.y - height) / 3;
+//      int topOffset = (screenResolution.y - height) / 2;
       framingRect = new Rect(leftOffset, topOffset, leftOffset + width, topOffset + height);
       Log.d(TAG, "Calculated framing rect: " + framingRect);
     }

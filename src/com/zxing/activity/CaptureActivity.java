@@ -19,6 +19,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.ericssonlabs.BarCodeTestActivity;
@@ -45,7 +46,7 @@ public class CaptureActivity extends Activity implements Callback {
 	private boolean playBeep;
 	private static final float BEEP_VOLUME = 0.10f;
 	private boolean vibrate;
-	private Button cancelScanButton;
+	private ImageButton cancelScanButton;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -55,7 +56,7 @@ public class CaptureActivity extends Activity implements Callback {
 		//ViewUtil.addTopView(getApplicationContext(), this, R.string.scan_card);
 		CameraManager.init(getApplication());
 		viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
-		cancelScanButton = (Button) this.findViewById(R.id.btn_cancel_scan);
+		cancelScanButton = (ImageButton) this.findViewById(R.id.btn_cancel_scan);
 		hasSurface = false;
 		inactivityTimer = new InactivityTimer(this);
 	}
@@ -122,7 +123,7 @@ public class CaptureActivity extends Activity implements Callback {
 		if (resultString.equals("")) {
 			Toast.makeText(CaptureActivity.this, "Scan failed!", Toast.LENGTH_SHORT).show();
 		}
-		else if (resultString.equals("150323300")){
+		else if (resultString.equals("3522930000792")){
         	Intent intent = new Intent(CaptureActivity.this, InfoActivity2.class);  
         	startActivity(intent);
 		}
