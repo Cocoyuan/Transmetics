@@ -120,10 +120,11 @@ public class CaptureActivity extends Activity implements Callback {
 		String resultString = result.getText();
 		
 		//FIXME
-		if (resultString.equals("")) {
-			Toast.makeText(CaptureActivity.this, "Scan failed!", Toast.LENGTH_SHORT).show();
-		}
-		else if (resultString.equals("3522930000792")){
+//		if (resultString.equals("")) {
+//			Toast.makeText(CaptureActivity.this, "Scan failed!", Toast.LENGTH_SHORT).show();
+//		}
+//		else 
+		if (resultString.equals("3522930000792")){
         	Intent intent = new Intent(CaptureActivity.this, InfoActivity2.class);  
         	startActivity(intent);
 		}
